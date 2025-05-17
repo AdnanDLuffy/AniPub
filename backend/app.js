@@ -18,7 +18,7 @@ let accountId = "";
 const DataBaseId = 'mongodb+srv://NodeDB:asdf1234@cluster0.cbnst.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 
-const port = precess.env.PORT ||3000;
+const port = process.env.PORT ||3000;
 
 mongoose.connect(DataBaseId)
 .then(()=>{
