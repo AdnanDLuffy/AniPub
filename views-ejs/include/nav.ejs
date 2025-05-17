@@ -1,7 +1,7 @@
 <nav class="nav">
     <div class="menu">
          <% if (Auth === true) { %>
-              <button class="Profile-Button" data-account="<%= userInfo.ID %> ">
+              <button class="Profile-Button" data-account="<%= userInfo.ID %>">
             <img class="img-logo"  src="/account_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
             <p>Profile</p>
         </button>
@@ -15,10 +15,19 @@
             <img class="img-logo"  src="/home_app_logo_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
             <p>Home</p>
         </button>
-        <button class="PlayList-button">
+
+        <% if (Auth === true) { %>
+        <button class="PlayList-button" data-account="<%= userInfo.ID %>">
             <img class="img-logo"  src="/video_library_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
             <p>Playlist</p>
         </button>
+        <% }  else {%>
+            <button class="PlayList-button" data-account="guest">
+                <img class="img-logo"  src="/video_library_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                <p>Playlist</p>
+            </button>
+        <% } %>     
+
         <button class="Security-button">
             <img class="img-logo"   src="/security_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
             <p>Security</p>

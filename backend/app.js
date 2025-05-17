@@ -200,29 +200,38 @@ app.get("/D",(req,res)=>{
     .then(res.redirect("/"))
 })
 
-app.get("/a",(req,res)=>{
-    Data.findByIdAndUpdate("68284f9a6d990915144e6868",{$push:{List:{"id":29382}}})
-    .then(info=>{
-        res.send(info);
-    })
-});
-app.get("/PlayList",(req,res)=>{
-    const Token = req.cookies.anipub;
 
+app.get("/PlayList/:id",(req,res)=>{
+    const Token = req.cookies.anipub;
+    const PlayListID = req.params.id;
     if(Token) {
         jwt.verify(Token,"I Am Naruto", async (err,data)=>{
             if(err) {
                 console.log(err)
-            } 
+            }
+            
             const accountID = data.id;
-            Data.findById(accountID)
-            .then(info=>{
-                const PlayList = info.List;
-                //gotta do it next 
-                res.send(PlayList); 
-            })
 
+            if(accountID === PlayListID) {
+
+
+            Data.findById(accountID)
+            .then( async (info)=>{
+                const PlayList = info.List;
+                let PlayListArray = [];
+                PlayList.forEach(value=>{
+                    PlayListArray.push(value.id);
+                })
+               const PlayListDB = await newList.find({_id:{$in:PlayListArray}})
+               res.render("PlayList",{SectionName:"PlayList Section",List: PlayListDB ,AniDB:OP,Auth:false,ID:accountID});
+            })
+        }
+        else {
+            res.redirect(`/PlayList/${PlayListID}`)
+        }
+            
          })
+
 
     }
     else {
@@ -266,7 +275,7 @@ app.post('/PlayList/Update',async (req,res)=>{
 
 
 
-app.get('/PlayList/Delete/:DeleteID',(req,res)=>{
+app.delete('/PlayList/Delete/:DeleteID',(req,res)=>{ 
     newList.findByIdAndDelete(req.params.DeleteID)
     .then (info=> {
         res.redirect("/PlayList")

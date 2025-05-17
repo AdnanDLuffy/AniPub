@@ -49,7 +49,9 @@
                             </div>
                            
                             <div class="remove-button-div">
-                              <a href="/PlayList/Delete/<%=value.id%>"><button class="remove-button" >Remove From List</button></a>  
+                              
+                                <button class="remove-button"  data-del="<%=value.id%>">Remove From List</button>
+                              
                             </div>
                         </div>
                     </div>
@@ -67,6 +69,6 @@
 
 
       
-      <script src="navigator.js"></script> 
+      <script src="/navigator.js"></script> 
     </body>
 </html>
