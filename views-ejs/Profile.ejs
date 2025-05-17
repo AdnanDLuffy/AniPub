@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/hc.css">
+    <link rel="stylesheet" href="/profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap" rel="stylesheet">
+</head>
+<body>
+      <!--onload="Onload(); -->
+    <%- include("./include/header.ejs")  %> 
+    <%- include("./include/nav.ejs") %> 
+      
+
+    <main class="box">
+       <div class="container">
+        <div class="img-box">
+            <div class="bg-img-div">
+                <img class="bg-img" src="/Esdeath.jpg" alt="">
+            </div>
+            <div class="profile-pic-div">
+                <img class="profile-pic" src="/Shinbou.jpg" alt="">
+            </div>
+
+        </div>
+        <div class="other-details">
+            <div class="name-div">
+                <p>Name :</p> <input class="name" type="text" id="name" autocomplete="additional-name" placeholder="<%= userInfo.Name %> " value="<%= userInfo.Name %> ">
+            </div>
+            <div class="mail-div">
+                 <p>Email : </p> <input class="email" id="Mail" type="email" placeholder="<%=userInfo.Email%>" value="<%= userInfo.Email%> ">
+                
+            </div>
+            <div class="genre-div">
+                <p>Fav.Genre : </p> <input class="genre" id="genre" type="text" placeholder="Isekai , Fantasy , Harem">
+                
+            </div>
+            <div class="hobby-div">
+                <p>Hobby : </p> <input class="hobby" id="hobby" type="text" placeholder="Watching Anime">
+               
+            </div>
+            <div class="address-div">
+                <p>Address : </p> <input class="address" id="address" type="text" placeholder="Earth">
+                
+            </div>
+            <div class="relationship-status-div">
+                <p style="font-size: 16px;">Relationship Status : </p><input class="rlsn-status" id="rlsns" type="text" placeholder="Single">
+             
+            </div>
+            <button class="save-btn" onclick="save();">Save</button>
+        </div>
+
+       </div>
+    </main>
+
+
+    
+    <script src="/navigator.js"></script>
+</body>
+</html>
