@@ -13,10 +13,10 @@ const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 const {AuthAcc} = require("./middleware/valideAcc.js");
 const bcrypt = require("bcrypt");
-
+require('dotenv').config();
 let accountId = "";
 
-const DataBaseId = 'mongodb+srv://NodeDB:asdf1234@cluster0.cbnst.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const DataBaseId = process.env.mongoDB || //your connection String;
 
 
 const port = process.env.PORT ||3000;
