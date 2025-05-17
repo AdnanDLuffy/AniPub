@@ -16,8 +16,8 @@ const bcrypt = require("bcrypt");
 require('dotenv').config();
 let accountId = "";
 
-const DataBaseId = process.env.mongoDB || //your connection String;
-
+const MONGO_String = "";// your string here
+const DataBaseId = process.env.mongoDB || MONGO_String;
 
 const port = process.env.PORT ||3000;
 
