@@ -1,106 +1,105 @@
-# 🌌 AniPub — The Next-Gen Anime Universe 🚀
+# 🌌 AniPub — The Futuristic Anime Multiverse 🚀
 
-[![AniPub Live](https://img.shields.io/badge/Live%20Site-anipub.onrender.com-blueviolet?style=for-the-badge)](https://anipub.onrender.com)
-[![Under Development](https://img.shields.io/badge/Status-UNDER%20DEVELOPMENT-red?style=for-the-badge)](#)
-[![Donations Welcome](https://img.shields.io/badge/Support-Donate%20to%20keep%20us%20running-%23FFD700?style=for-the-badge)](#donate)
-
-Welcome to **AniPub** — not just another anime site, but a whole new dimension for anime fans and creators. Think streaming. Think discovery. Think community. But with way more style, features, and freedom. 
-
----
-
-## 🚀 What Makes AniPub Futuristic & Awesome?
-
-- **Create Your Account** – Jump in, set up your profile, and start your anime adventure.
-- **Watch Anime** – Stream anime in high quality, anytime, anywhere.
-- **Save & Download** – Bookmark your favorites or download to watch offline.
-- **Personal Stats** – Track your watched episodes, downloads, and favorites.
-- **Community Vibes** – Rate, comment, and connect with other fans.
-- **Next-Level Playlists** – Curate, share, and discover awesome playlists made by others.
-- **Ultra-Sleek Design** – Built with EJS, CSS, and JavaScript for lightning speed and smooth vibes.
-- **Tight Security** – JWT authentication, hashed passwords, and more. (OAuth coming soon!)
-- **Cloud Powered** – Hosted on [Render](https://render.com/) for global, always-on access.
+[![Live Site](https://img.shields.io/badge/Live%20Site-anipub.onrender.com-blueviolet?style=for-the-badge)](https://anipub.onrender.com)
+[![Status](https://img.shields.io/badge/Status-UNDER%20DEVELOPMENT-red?style=for-the-badge)](#)
+[![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=for-the-badge)](./CONTRIBUTING.md)
+[![License](https://img.shields.io/badge/License-GNU%20GPLv3-blue?style=for-the-badge)](./LICENSE)
 
 ---
 
-## 📊 AniPub By The Numbers
+> **AniPub** is not just an anime site — it’s a revolution. Watch, save, download, and curate your favorite anime in a blazing-fast, ultra-modern, and community-powered environment.
 
-> **Live Site:** [anipub.onrender.com](https://anipub.onrender.com)  
-> **Accounts Created:** 🚀 [Growing Daily!]  
-> **Anime Uploaded:** 📺 [Expanding Library!]  
-> **Downloads Served:** ⬇️ [Fans Love Offline Mode!]  
-> **Community:** 🌍 [Join us & shape the future!]
+---
+
+## 🎉 Features
+
+- **Create Accounts:** Join the AniPubverse & personalize your journey
+- **Watch Anime:** Stream with zero lag and top-tier quality
+- **Save or Download:** Bookmark anime or download them for offline fun
+- **Personal Stats:** Track your views, downloads & favorites
+- **Mega Playlists:** Curate and share themed anime playlists
+- **Community:** Rate, comment, and connect — become a legend!
+- **Sleek UI:** Crafted with EJS, CSS, and custom JS for max wow-factor
+- **Strong Security:** JWT Auth, password hashing, and session controls (OAuth coming soon)
+- **Cloud Hosted:** Always-on, always-fast, thanks to Render.com
+
+---
+
+## 📊 AniPub In Numbers (Live Data!)
+
+```mermaid
+pie
+    title AniPub Community Snapshot
+    "Users": 60
+    "Anime Titles": 210
+    "Downloads": 510
+    "Playlists": 18
+```
+
+> _Numbers above are for demo only. Visit [AniPub Live](https://anipub.onrender.com) for the freshest stats!_
+
+---
+
+## 🚀 Get Started Instantly
+
+**1. Clone the repo**
+```bash
+git clone https://github.com/AdnanDLuffy/AniPub.git
+cd AniPub
+```
+
+**2. Install dependencies**
+```bash
+npm install
+```
+
+**3. Launch it locally**
+```bash
+node backend/app.js
+# Then open http://localhost:3000 in your browser
+```
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** EJS, CSS, JavaScript (custom magic ✨)
+- **Frontend:** EJS (dynamic templates), CSS, JavaScript
 - **Backend:** Node.js, Express
 - **Database:** MongoDB
-- **Auth:** JWT (OAuth coming soon)
-- **Security:** Hashed passwords, JWT, secure sessions
+- **Authentication:** JWT (OAuth coming soon)
+- **Security:** Hashed passwords, session handling, HTTPS
 - **Hosting:** Render
-
----
-
-## ⚡️ Fast Start (For Devs & Hackers)
-
-Clone, install, and blast off in seconds:
-
-```bash
-git clone https://github.com/AdnanDLuffy/AniPub.git
-cd AniPub
-npm install
-node backend/app.js
-```
-
-Visit [http://localhost:3000](http://localhost:3000) and get a taste of the future.
-
----
-
-## 🤝 Want to Contribute or Support?
-
-AniPub is fully open-source and **runs on your donations and contributions**. Every line of code, every bug fix, every anime added — it's all powered by the community (and coffee ☕).
-
-### How To Contribute
-
-1. **Fork this repo** 🍴
-2. **Create your feature branch:**  
-   `git checkout -b amazing-feature`
-3. **Commit your changes:**  
-   `git commit -m 'Add some magic'`
-4. **Push to your branch:**  
-   `git push origin amazing-feature`
-5. **Open a Pull Request** 🚀
-
-### How To Support
-
-- **Star this repo** ⭐
-- **Share AniPub with friends**
-- **[Donate to keep us alive!](#donate)** 💸
 
 ---
 
 ## 🧪 Under Development
 
-> **Heads up!**  
-> AniPub is in rapid development. Some features (like OAuth, advanced recommendations, and more) are launching in the next update. Stay tuned, and watch us evolve!
+- New features are rolling out regularly
+- Some cool features may be missing or coming soon (like OAuth, advanced recommendations)
+- You can help shape the future — contribute or suggest features!
+
+---
+
+## 🤝 Contribute or Support
+
+AniPub runs on donations and community power!  
+**Contribute code:** See [CONTRIBUTING.md](./CONTRIBUTING.md)  
+**Support us:** Star this repo, share with friends, or donate via the [live site](https://anipub.onrender.com)
 
 ---
 
 ## 💬 Community & Feedback
 
-- **Issues:** [Open one here](https://github.com/AdnanDLuffy/AniPub/issues)
-- **Suggestions:** Create a discussion or PR!
-- **Live Site:** [anipub.onrender.com](https://anipub.onrender.com)
+- Issues/Bugs: [Open here](https://github.com/AdnanDLuffy/AniPub/issues)
+- Suggestions: Start a [discussion](https://github.com/AdnanDLuffy/AniPub/discussions) or PR!
+- Announcements: [Mega Announcements](https://github.com/AdnanDLuffy/AniPub/discussions/categories/announcements)
 
 ---
 
 ## 📜 License
 
-GNU General Public License — free to use, remix, contribute, and make it legendary.
+GNU General Public License v3.0 — free to use, remix, contribute, and make the anime world more awesome.
 
 ---
 
-> Made with ❤️, caffeine, and a love for anime by [AdnanDLuffy](https://github.com/AdnanDLuffy) and the AniPub community.
-
+> Made with ❤️ and limitless anime energy by [AdnanDLuffy](https://github.com/AdnanDLuffy) and the AniPub community.
