@@ -8,7 +8,7 @@ const list = document.querySelectorAll(".li-fs");
 list.forEach(value=>{
     value.addEventListener('click',()=>{
         const EpId = value.dataset.ep;
-        window.location.href=`https://AniPub.serveo.net/AniPlayer/${AniId}/${EpId}`         
+        window.location.href=`/AniPlayer/${AniId}/${EpId}`         
     })
 })
 const profile = document.querySelectorAll(".Profile");
@@ -30,6 +30,6 @@ profile.forEach(value=>{
     value.addEventListener('click',()=>{
         const AnimeID = Number(value.dataset.anime);
 
-       window.location.href=`https://anipub.serveo.net/AniPlayer/${AnimeID}/${0}`
+       window.location.href=`/AniPlayer/${AnimeID}/${0}`
     })
 })
