@@ -5,7 +5,8 @@ const ejs = require("ejs");
 const path = require("path");
 const mongoose = require("mongoose");
 const Data = require("./models/model");
-const newList = require("./models/list");
+const {newList} = require("./models/list");
+const {myPlaylist} = require("./models/list")
 const { error, profile } = require("console");
 const OP = require("./Data/data");
 const jwt = require("jsonwebtoken");
@@ -192,28 +193,73 @@ app.get(`/AniPlayer/:AniId/:AniEP`,(req,res)=>{
    
 });
 
-app.get("/PlayList",(req,res)=>{
-    newList.find()
-    .then(info=> {
-        res.render("PlayList",{SectionName:"PlayList Section",List: info,AniDB:OP,Auth:false});
+//Delete all account
+
+app.get("/D",(req,res)=>{
+    Data.deleteMany()
+    .then(res.redirect("/"))
+})
+
+app.get("/a",(req,res)=>{
+    Data.findByIdAndUpdate("68284f9a6d990915144e6868",{$push:{List:{"id":29382}}})
+    .then(info=>{
+        res.send(info);
     })
+});
+app.get("/PlayList",(req,res)=>{
+    const Token = req.cookies.anipub;
+
+    if(Token) {
+        jwt.verify(Token,"I Am Naruto", async (err,data)=>{
+            if(err) {
+                console.log(err)
+            } 
+            const accountID = data.id;
+            Data.findById(accountID)
+            .then(info=>{
+                const PlayList = info.List;
+                //gotta do it next 
+                res.send(PlayList); 
+            })
+
+         })
+
+    }
+    else {
+        res.redirect("/Login")
+    }
+
+    // .then(info=> {
+    //     res.render("PlayList",{SectionName:"PlayList Section",List: info,AniDB:OP,Auth:false});
+    // })
     
 })
 
-app.get('/PlayList/Update/:AniID/:AniEP',(req,res)=>{
-    const Array = req.url;
-    const newArray = Array.split("/");
-    const AniID = newArray[3];
-    const AniEP = newArray[4];
-    const upList = new newList({
-        AniID : AniID,
-        AniEP : AniEP,
-        Date: Date(),
-    });
-    upList.save()
-    .then(info=> {
-        res.redirect("/PlayList")
-    })
+app.post('/PlayList/Update',async (req,res)=>{
+    const Token = req.cookies.anipub;
+
+    if(Token) {
+         jwt.verify(Token,"I Am Naruto", async (err,data)=>{
+             if(err){
+                 console.log(err)
+             }    
+                     const ListID  = await newList.create({
+                     AniID : req.body.AniID,
+                     AniEP : req.body.EpID,
+                     Date: Date(),
+                     })
+                      Data.findByIdAndUpdate(data.id,{$push:{List:{"id":ListID._id}}})
+                     .then(info=>{
+                         res.json(["PlayList Updated"])
+                     })
+         })
+        
+    
+   
+ }
+ else {
+             res.json(["/Login"])
+         }
 
 })
 

@@ -1,6 +1,27 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+
+const playList = new Schema ({
+  _id:{
+    type:String,
+    required:true,
+  },
+  AniID:{
+    type:String,
+    required:false,
+},
+AniEP :{
+    type:String,
+    required:false,
+},
+Date:{
+    type:String,
+    required:false,
+},
+
+},{timestamps:true})
+
 const List = new Schema({
     AniID:{
         type:String,
@@ -17,5 +38,5 @@ const List = new Schema({
 },{timestamps:true}) 
 
 const newList = mongoose.model("List",List);
-
-module.exports = newList;
+const myPlaylist = mongoose.model("myList",playList);
+module.exports = {newList,myPlaylist};

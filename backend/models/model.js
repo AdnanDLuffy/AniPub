@@ -33,8 +33,21 @@ const Data = new Schema({
     RelationshipStatus:{
         type:String,
         required:false,
-    } 
-},{
+    },
+    List: [
+        {
+            _id:{
+                type:String,
+                required:false,
+            },
+            id:{
+                type:String,
+                required:false,
+            }
+        }
+    ]
+},
+{
     timestamps:true,
 })
 

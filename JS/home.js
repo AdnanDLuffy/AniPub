@@ -1,11 +1,11 @@
-const profile = document.querySelector(".profile-icon");
+const profileButton = document.querySelector(".profile-icon");
 
-profile.addEventListener('click',()=>{
-    if(profile.dataset.account === "guest") {
+profileButton.addEventListener('click',()=>{
+    if(profileButton.dataset.account === "guest") {
         window.location.href = "/Login"
         // I will add a modal later ! 
     }
     else {
-        window.location.href = `/Profile/${profile.dataset.account}`;
+        window.location.href = `/Profile/${profileButton.dataset.account}`;
     }
 })
