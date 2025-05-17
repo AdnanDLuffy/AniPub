@@ -18,7 +18,7 @@ let accountId = "";
 const DataBaseId = 'mongodb+srv://NodeDB:asdf1234@cluster0.cbnst.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 
-const port = 3000;
+const port = precess.env.PORT ||3000;
 
 mongoose.connect(DataBaseId)
 .then(()=>{
@@ -172,11 +172,24 @@ app.get("/Profile/:id",AuthAcc,(req,res)=>{
 
 
 app.get(`/AniPlayer/:AniId/:AniEP`,(req,res)=>{
-    const Array = req.url;
+    const Token = req.cookies.anipub;
+     const Array = req.url;
     const newArray = Array.split("/")
     const AniId = Number(newArray[2]);
     const AniEP = Number(newArray[3]);
-    res.render("AniPlayer",{AniDB : OP,AniId,AniEP})
+    if(Token){
+        jwt.verify(Token,"I Am Naruto",(err,data)=>{
+            if(err){
+                console.log(err)
+            }
+             res.render("AniPlayer",{AniDB : OP,AniId,AniEP,auth:true,ID:data.id})
+        })
+    }
+    else {
+        res.render("AniPlayer",{AniDB : OP,AniId,AniEP,auth:false,ID:"guest"})
+    }
+   
+   
 });
 
 app.get("/PlayList",(req,res)=>{
