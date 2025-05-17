@@ -52,6 +52,10 @@ cd AniPub
 ```bash
 npm install
 ```
+```
+create mongo.env
+than put mongoDB="your database token"
+```
 
 **3. Launch it locally**
 ```bash
