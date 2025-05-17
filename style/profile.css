@@ -75,67 +75,46 @@ p {
     margin-bottom: 20px;
    
 }
+
 .mail-div , .genre-div , .hobby-div , .whatsapp-div  , .address-div , .relationship-status-div , .name-div{
    
     height: fit-content;
     border-radius: 10px;
     padding-left: 10px;
     width: 300px;
+    height: 40px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
+
     border-style: solid;
     border-width: 1px;
     border-color: rgba(5, 5, 129, 0.863);
     box-shadow: 2px 2px 5px rgba(1, 9, 24, 0.603);
     background-color: rgba(128, 128, 128, 0.521);
 }
+.det-container {
+    width: 100%;
+    margin-right: 5px;
+    background-color: rgb(41, 38, 38);
+    display: flex;
+    align-items: center;
+    height: 30px;
+    border-radius: 15px;
+}
+
 .other-details p {
     margin: 0;
     margin-right: 8px;
+    white-space: nowrap;
     
 }
-.other-details input {
-     height: 30px;
-    background-color: transparent;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    flex: 1;
-    border: none;
-    color: white;
-    margin-right: 10px;
-    background-color: rgba(47, 47, 58, 0.555);
-    padding-left: 10px;
-    border-radius: 15px;
+.det-container p {
+    margin-left: 10px;
 }
+
 .rlsn-status {
     width: 90px;
-}
-.genre:focus , .name:focus ,.email:focus , .hobby:focus , .address:focus , .rlsn-status:focus {
-    outline: 0;
-    border: 0;
-} 
-.name::placeholder ,.email::placeholder , .hobby::placeholder , .address::placeholder , .rlsn-status::placeholder {
-    color: rgba(255, 232, 232, 0.925);
-}
-.save-btn {
-    color: white;
-    height: 35px;
-    width: 70px;
-    border-radius: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.589);
-    background-color: rgba(47, 47, 58, 0.555);
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: -2px -2px 5px black;
-}
-.save-btn:hover {
-    color: rgb(0, 0, 0) ;
-    background-color: rgb(255, 255, 255);
-}
-.save-btn:active {
-    box-shadow: none;
-    opacity: 0.7;
 }
 .img-logo {
     height: 40px;

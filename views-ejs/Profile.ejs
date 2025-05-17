@@ -32,29 +32,50 @@
         </div>
         <div class="other-details">
             <div class="name-div">
-                <p>Name :</p> <input class="name" type="text" id="name" autocomplete="additional-name" placeholder="<%= userInfo.Name %> " value="<%= userInfo.Name %> ">
+                <p>Name :</p> 
+               <div class="det-container">
+                <p class="name"  id="name" autocomplete="additional-name"> <%= userInfo.Name %> </p>
+               </div> 
             </div>
             <div class="mail-div">
-                 <p>Email : </p> <input class="email" id="Mail" type="email" placeholder="<%=userInfo.Email%>" value="<%= userInfo.Email%> ">
+                 <p>Email : </p> 
+                 <div class="det-container">
+                  <p class="email" id="Mail" type="email"> <%=userInfo.Email%></p>
+                
+                 </div>   
                 
             </div>
             <div class="genre-div">
-                <p>Fav.Genre : </p> <input class="genre" id="genre" type="text" placeholder="Isekai , Fantasy , Harem">
+                <p>Fav.Genre : </p> 
+                <div class="det-container">
+                  <p class="genre" id="genre"></p>
+                </div>
+               
                 
             </div>
             <div class="hobby-div">
-                <p>Hobby : </p> <input class="hobby" id="hobby" type="text" placeholder="Watching Anime">
-               
+                <p>Hobby : </p>
+                <div class="det-container">
+                 <p class="hobby" id="hobby"></p>
+                </div>  
             </div>
             <div class="address-div">
-                <p>Address : </p> <input class="address" id="address" type="text" placeholder="Earth">
+                <p>Address : </p>
+                <div class="det-container">
+                 <p class="address" id="address"></p>
+                
+                </div>
                 
             </div>
             <div class="relationship-status-div">
-                <p style="font-size: 16px;">Relationship Status : </p><input class="rlsn-status" id="rlsns" type="text" placeholder="Single">
+                <p style="font-size: 16px;">Relationship Status : </p>
+                <div class="det-container">
+                  <p class="rlsn-status" id="rlsns"> </p>
              
+                </div>
+               
             </div>
-            <button class="save-btn" onclick="save();">Save</button>
+            
         </div>
 
        </div>
