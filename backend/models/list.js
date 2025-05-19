@@ -35,6 +35,10 @@ const List = new Schema({
         type:String,
         required:true,
     },
+    Owner: {
+        type:String,
+        required:true,
+    }
 },{timestamps:true}) 
 
 const newList = mongoose.model("List",List);

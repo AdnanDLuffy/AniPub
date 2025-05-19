@@ -16,7 +16,7 @@ const bcrypt = require("bcrypt");
 require('dotenv').config();
 let accountId = "";
 
-const MONGO_String = "";// your string here
+const MONGO_String = 'mongodb+srv://NodeDB:asdf1234@cluster0.cbnst.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';// your string here
 const DataBaseId = process.env.mongoDB || MONGO_String;
 
 const port = process.env.PORT ||3000;
@@ -256,6 +256,7 @@ app.post('/PlayList/Update',async (req,res)=>{
                      AniID : req.body.AniID,
                      AniEP : req.body.EpID,
                      Date: Date(),
+                     Owner:data.id,
                      })
                       Data.findByIdAndUpdate(data.id,{$push:{List:{"id":ListID._id}}})
                      .then(info=>{
@@ -276,13 +277,36 @@ app.post('/PlayList/Update',async (req,res)=>{
 
 
 app.delete('/PlayList/Delete/:DeleteID',(req,res)=>{ 
-    newList.findByIdAndDelete(req.params.DeleteID)
-    .then (info=> {
-        res.redirect("/PlayList")
+   const Token = req.cookies.anipub;
+   const postId = req.params.DeleteID;
+   if (Token) {
+    jwt.verify(Token,"I Am Naruto",(err,data)=>{
+        if(err) {
+            console.log(err)
+        }
+        newList.findById(postId)
+        .then(info =>{
+            if(info.Owner === data.id) {
+                newList.findByIdAndDelete(req.params.DeleteID)
+                    .then (info=> {
+                        if(info) {
+                            res.json(["Delete Done"])
+                        }
+                        else {
+                            res.json(["Can't find the list"])
+                        }
+                    })
+                    .catch(error=>{
+                        console.log(error)
+                    })
+            }
+            else {
+                res.json(["You are not Owner of this post !"])
+            }
+        })
     })
-    .catch(error=>{
-        console.log(error)
-    })
+   }
+     
 })
 
 //Update --- false auth to cheking
