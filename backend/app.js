@@ -58,7 +58,7 @@ app.use(express.static(path.join(__dirname,"../Styles")));
 app.use(express.urlencoded({extended:true}));
 
 
-app.use(morgan("dev")); 
+app.use(morgan("combined")); 
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"../views-ejs"));
 
