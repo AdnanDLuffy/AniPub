@@ -16,8 +16,13 @@ const bcrypt = require("bcrypt");
 require('dotenv').config();
 let accountId = "";
 
-const MONGO_String = '';// your string here
-const DataBaseId = process.env.mongoDB || MONGO_String;
+const MONGO_String = 'mongodb+srv://NodeDB:asdf1234@cluster0.cbnst.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';// your string here
+const DataBaseId = process.env.mongoDB || process.env.mongoToken || MONGO_String;
+
+// the token above is only for production !! 
+// please if you are using your own token before push make 
+// sure your env file is in gitignore - AdnanDLuffy
+
 
 const port = process.env.PORT ||3000;
 

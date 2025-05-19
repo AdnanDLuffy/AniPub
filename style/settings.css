@@ -1,0 +1,130 @@
+body {
+    padding-top: 80px;
+    padding-left: 90px;
+
+}
+.main-body {
+    width: 98%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-direction: column; 
+    column-gap: 10px;
+    row-gap: 10px;
+   
+}
+.main-body p , div  ,span{
+    font-family: monospace;
+    color: white;
+} 
+.pass-changer ,.email-changer ,.Additional-Info,.privacy-settings , .main-body,.name-changer {
+      display: flex;
+
+    align-items: center;
+}
+.privacy-settings , .Additional-Info {
+    height: 60px;
+    background-color: rgb(64, 59, 59);
+    width: 96%;
+    border-radius: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.txt {
+    margin-left: 10px;
+}
+.txt p {
+    font-family: monospace;
+    font-size: 16px;
+}
+.icon {
+    height: 40px;
+}
+.icon img {
+   border-radius: 50%;
+    height: 100%;
+    filter:contrast(0);
+    transition: all 0.17s;
+}
+.iconB {
+      cursor: pointer;
+       border-radius: 50%;
+       height: 40px;
+       width: 40px;
+       display: flex;
+       border: 0;
+       margin-right: 5px;
+       background-color: transparent;
+       justify-content: center;
+}
+.icon img:hover {
+    box-shadow: 0px 0px 2px 1px rgb(255, 255, 255),
+    0px 0px 3px 2px rgba(255, 255, 255, 0.871)
+    ;
+}
+.icon img:active {
+    box-shadow: none;
+    opacity: 0.7;
+}
+.privacy-settings-container , .Additional-Info-Box{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(35, 34, 34);
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px;
+}
+.name-changer , .email-changer , .pass-changer{
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.name-changer p , .email-changer p , .pass-changer p{
+    margin-left:10px;
+    font-size: 15px;   
+}
+.name-changer button , .email-changer button ,.pass-changer button{
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 4px ;
+    cursor: pointer;
+    background: red;
+    color: white;
+    font-family: serif;
+}
+.name-changer input , .email-changer input , .pass-changer input {
+    outline: 0;
+    border: 0;
+    height: 20px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.Genre-list {
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+.Genre-list span {
+    color: rgb(35, 216, 35);
+    padding: 2px 4px 2px 4px ;
+    border: 1px solid green;
+    border-radius: 10px;
+    height: fit-content;
+    cursor: pointer;
+}
+.Genre-list span:hover {
+    background-color: rgb(49, 123, 49);
+    color: white;
+}
+.Genre-list span:active {
+    opacity: 0.7;
+}
+.gentxt {
+    margin-left:10px;
+}
