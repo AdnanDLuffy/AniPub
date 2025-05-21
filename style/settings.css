@@ -128,3 +128,56 @@ body {
 .gentxt {
     margin-left:10px;
 }
+input , select {
+    outline: 0;
+    border: 0  ;
+    margin-left: 10px;;
+
+}
+select {
+    color: rgb(236, 224, 224);
+    background-color: black;
+    height: 30px;
+    padding-left: 2px;
+    border-radius: 10px;
+ 
+}
+option {
+    color: rgb(141, 135, 135);
+}
+.addr {
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 5px;
+    background-color: black;
+    color: white;
+}
+.addr::placeholder {
+    color: rgb(236, 224, 224);
+}
+.ai-sb {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.ai-sb button {
+    background-color: rgb(10, 5, 56);
+    color: white;
+    font-weight: bold;
+    border: 0;
+    border-radius: 10px;
+    padding:5px 10px 5px 10px;
+    cursor: pointer;
+    transition: all 0.17s;
+    box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.596);
+}
+.ai-sb button:hover {
+    opacity: 0.8;
+}
+.ai-sb button:active {
+    opacity: 0.6;
+    box-shadow: none;
+}

@@ -159,10 +159,10 @@
                     <span class="genre seinen" data-genre="seinen">Seinen</span>
                 </div>
                 
-                <!-- <div>
-                    <p>Select Your RelationShip Status:-</p>
+                <div>
+                    <p class="txt">Select Your RelationShip Status:-</p>
                     
-                    <select name="" id="">
+                    <select name="rlts" id="rlts">
                         <option value="1">Single</option>
                         <option value="2">In my Dream I have a Waifu</option>
                         <option value="3">Married - Real One</option>
@@ -172,31 +172,30 @@
                 </div>
                 
                 <div>
-                    <p>Where do you live ?</p>
-                    <input type="text" placeholder="Konoha,Hidden Leaf Village">
+                    <p class="txt">Where do you live ?</p>
+                    <input class="addr" type="text" placeholder="Konoha,Hidden Leaf Village" maxlength="20" autocomplete="address-level1">
                 </div>
                 
                 <div>
-                    <p>Your Blood Group</p>
-                    <select name="" id="">
-                        <option value="">AB+</option>
-                        <option value="">AB-</option>
-                        <option value="">O+</option>
-                        <option value="">O-</option>
-                        <option value="">A+</option>
-                        <option value="">A-</option>
-                        <option value="">B+</option>
-                        <option value="">B-</option>
-                        <option value="">Rare</option>
-                        <option value="">Prefer Not to Say</option>
+                    <p class="txt">Your Blood Group</p>
+                    <select name="bloodgroup" id="bloodgroup">
+                        <option value="1">AB+</option>
+                        <option value="2">AB-</option>
+                        <option value="3">O+</option>
+                        <option value="4">O-</option>
+                        <option value="5">A+</option>
+                        <option value="6">A-</option>
+                        <option value="7">B+</option>
+                        <option value="8">B-</option>
+                        <option value="9">Rare</option>
+                        <option value="10">Prefer not to Say</option>
                     </select>
                     
                 </div>
 
-                <p>You can hide them in the Settings page</p>
- -->
-
-
+                <div class="ai-sb">
+                    <button class="atst-save">Save</button>
+                </div>
 
             </div>
 
@@ -207,6 +206,7 @@
 
         <script src="/JS/pv-st-ch.js"></script> 
       <script src="/JS/navigator.js"></script>
-        <script src="/JS/additional-st.js"></script>
+        <script type="module" src="/JS/additional-st.js"></script>
+        <script type="module" src="/JS/ad-st-s.js"></script>
     </body>
 </html>

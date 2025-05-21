@@ -10,6 +10,9 @@ const spliceItem = (remover) => {
    localStorage.setItem("genre",JSON.stringify(genreList));
    return removed;
 }
+export const getItem = () =>{
+    return JSON.parse(localStorage.getItem("genre")) ;
+}
 
 Genres.forEach(value=>{
     value.addEventListener('click',()=>{
