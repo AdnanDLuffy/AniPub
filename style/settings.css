@@ -16,12 +16,12 @@ body {
     font-family: monospace;
     color: white;
 } 
-.pass-changer ,.email-changer ,.Additional-Info,.privacy-settings , .main-body,.name-changer {
+.pass-changer ,.email-changer ,.Account-Info ,.Additional-Info,.privacy-settings , .main-body,.name-changer {
       display: flex;
 
     align-items: center;
 }
-.privacy-settings , .Additional-Info {
+.privacy-settings , .Additional-Info , .Account-Info {
     height: 60px;
     background-color: rgb(64, 59, 59);
     width: 96%;
@@ -180,4 +180,56 @@ option {
 .ai-sb button:active {
     opacity: 0.6;
     box-shadow: none;
+}
+.account-info-div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 96%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+    background: rgb(35, 34, 34);
+}
+.txt-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+textarea {
+    width: 90%;
+    resize: none;
+    outline: 0;
+    color: white;
+    padding: 5px;
+    height: 80px;
+    box-shadow: inset 0px 0px 2px 1px  rgba(72, 68, 68, 0.907) ;
+    background: rgb(16, 12, 12);
+    border: 0;
+}
+
+.pfp-div {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    row-gap: 8px;
+}
+.pfp-div .pfp {
+    height: 100px;
+    width: 100px;
+    border: 0;
+    background: transparent;
+    
+    border-radius: 50px;
+}
+.pfp-div img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.pfp:hover {
+    border: 2px dotted green;
+    cursor: pointer;
 }

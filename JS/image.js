@@ -1,0 +1,1 @@
+const select = document.querySelector("#gender")
