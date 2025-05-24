@@ -210,47 +210,121 @@
 
             <div class="account-info-div">
                 <div class="txt-container">
-                     <textarea name="bio" id="bio" cols="30" rows="10">Bio</textarea>
+                     <textarea name="bio" id="bio" cols="30" rows="10"> Bio </textarea>
 
+                     <div class="count-div">
+                        <p class="wrn"><span>Count:-</span> <span class="count"></span>/50</p>
+                        
+                     </div>
                 </div>
                 <div>
-                    <p >What's Your Gender</p>
+                    <p class="txt">What's Your Gender</p>
                     <select name="gender" id="gender">
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
                 </div>
-                <p>Chose Your Profile Pic</p>
+                <p class="txt">Chose Your Profile Pic</p>
                 <div class="pfp-div">
-                   
-                   <div class="pfp">
-                    <img src="/image/ProfilePic/bunny.jpg" alt="" srcset="">
-                   </div>
-                  <div class="pfp">
-                        <img src="/image/ProfilePic/esdeath.jpg" alt="">
-                  </div>
-                  <div class="pfp">
-                        <img src="/image/ProfilePic/Luccy.jpg" alt="">
-                  </div>
-                  <div class="pfp">
-                        <img src="/image/ProfilePic/makima.jpg" alt="">
-                  </div>
-                  <div class="pfp">
-                        <img src="/image/ProfilePic/mitsuri.jpg" alt="" srcset="">
-                  </div>
-                   <div class="pfp">
-                        <img src="/image/ProfilePic/princia.jpg" alt="">
-                   </div>
-                   <div class="pfp">
-                    <img src="/image/ProfilePic/tenko.jpg" alt="">
-                   </div>
-                   <div class="pfp">
-                        <img src="/image/ProfilePic/tsukasa.jpg" alt="">
-                   </div>
+                   <div class="girls-pfp" >
+
+                    <div class="pfp bunny" data-name="bunny.jpg">
+                        <img src="/image/ProfilePic/bunny.jpg" alt="bunny profile pic" >
+                    
+                        <div class="info-pfp">
+                            <p>
+                                I’m Mai, a third-year actress navigating love and Adolescence Syndrome mysteries.    </p>
+                        </div>
+                    </div>
+                    <div class="pfp esdeath" data-name="esdeath.jpg">
+                        <img src="/image/ProfilePic/esdeath.jpg" alt="esdeath profile pic" >
+                        <div class="info-pfp">
+                            <p>
+                                I’m Esdeath, Empire’s ruthless General, wielding ice and thriving on strength. 
+                             </p>
+                        </div>        
+                    
+                    </div>
+                    <div class="pfp luccy" data-name="Luccy.jpg">
+                        <img src="/image/ProfilePic/Luccy.jpg" alt="luccy profile pic" >
+                        <div class="info-pfp">
+                            <p>
+                             ~ Too Sleepy
+                            </p>
+                        </div>  
+                    </div>
+                    <div class="pfp makima" data-name="makima.jpg">
+                        <img src="/image/ProfilePic/makima.jpg" alt="makima profile pic" >
+                        <div class="info-pfp">
+                            <p>
+                                I’m Makima, a cunning Control Devil, manipulating for my own dark goals.      </p>
+                        </div>  
+                    </div>
+                    <div class="pfp mitsuri" data-name="mitsuri.jpg">
+                        <img src="/image/ProfilePic/mitsuri.jpg" alt="mitsuri profile pic" >
+                        <div class="info-pfp">
+                            <p>
+                                I’m Mitsuri, a bubbly Hashira, spreading love with my whip-like blade.      </p>
+                        </div>  
+                    </div>
+                    <div class="pfp princia" data-name="princia.jpg">
+                        <img src="/image/ProfilePic/princia.jpg" alt="princia profile pic" >
+                        <div class="info-pfp">
+                            <p>
+                                I’m Princia, Clover Kingdom’s fierce Wizard King, commanding Legion Magic    </p>
+                        </div>  
+                    </div>
+                    <div class="pfp tenko" data-name="tenko.jpg">
+                        <img src="/image/ProfilePic/tenko.jpg" alt="tenko profile pic" >
+                        <div class="info-pfp">
+                            <p>
+                                I’m Tenko, a spirited fighter, wielding powers in Mato’s demon battles.     </p>
+                        </div>  
+                    </div>
+                    <div class="pfp tsukasa" data-name="tsukasa.jpg">
+                        <img src="/image/ProfilePic/tsukasa.jpg" alt="tsukasa profile pic from Fly me over the moon" >
+                        <div class="info-pfp">
+                            <p>
+                                I’m Tsukasa, a timeless beauty, sharing love and secrets with my husband.  </p>
+                        </div>  
+                    </div>
 
                 </div>
+
+                <div class="boys-pfp">
+                    <div class="pfp cid" data-name="cid.jpg">
+                        <img src="/image/ProfilePic/boys/cid.jpg" alt="cid profile pic">
+                        <div class="info-pfp">
+                            <p>
+                                I’m Cid, mastermind behind Shadow Garden, orchestrating chaos in the shadows.
+                            </p>
+                        </div>  
+
+                    </div>
+                    <div class="pfp hickigaya" data-name="hickigaya.jpg">
+                        <img src="/image/ProfilePic/boys/hickigaya.jpg" alt="hickigaya profile pic">
+                        <div class="info-pfp">
+                            <p>
+                                I’m Hachiman, a cynical loner, solving high school problems my way.
+                            </p>
+                        </div>  
+
+                    </div>
+                    <div class="pfp luffy" data-name="luffy.jpg">
+                        <img src="/image/ProfilePic/boys/luffy.jpg" alt="luffy profile pic">
+                        <div class="info-pfp">
+                            <p>
+                                I’m Luffy, Straw Hat captain, chasing One Piece with my crew! 
+                            </p>
+                        </div>  
+
+                    </div>
+                </div>
             
-            
+            </div>
+            <div class="save-acc-info">
+                <button>Save</button>
+            </div>
             
             
             </div>
@@ -301,5 +375,6 @@
         <script type="module" src="/JS/additional-st.js"></script>
         <script type="module" src="/JS/ad-st-s.js"></script>
         <script src="/JS/ad-nav.js"></script>
+        <script src="/JS/acc-info.js"></script>
     </body>
 </html>

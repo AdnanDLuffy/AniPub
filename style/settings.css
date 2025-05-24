@@ -196,6 +196,12 @@ option {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+.count-div {
+    position: absolute;
+    bottom: -35px;
+    right: 5px;
 }
 textarea {
     width: 90%;
@@ -209,12 +215,7 @@ textarea {
     border: 0;
 }
 
-.pfp-div {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 8px;
-    row-gap: 8px;
-}
+
 .pfp-div .pfp {
     height: 100px;
     width: 100px;
@@ -228,8 +229,56 @@ textarea {
     width: 100%;
     border-radius: 50%;
 }
-
+.pfp {
+    position: relative;
+}
+.info-pfp {
+    position: absolute;
+    border: 1px solid white;
+    padding: 5px;
+    min-width: 150px;
+    background-color: black;
+    z-index: 10;
+    border-radius: 10px;
+    display: flex;
+}
+.info-pfp p {
+    margin-left: 5px;
+}
+.info-pfp {
+    display: none;
+}
+.pfp:hover .info-pfp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .pfp:hover {
-    border: 2px dotted green;
     cursor: pointer;
+}
+.girls-pfp ,.boys-pfp{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    row-gap: 8px;
+    margin-left: 10px;
+}
+.save-acc-info {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.save-acc-info button {
+    background-color: rgb(2, 255, 2);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 6px 10px 6px 10px;
+}
+.save-acc-info button:active {
+    opacity: 0.7;
 }
