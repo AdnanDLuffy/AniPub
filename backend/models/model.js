@@ -18,7 +18,19 @@ const Data = new Schema({
         required:true,
         minlength:[8,"please use a pass 8 cher long"]
     },
-    Genre:{
+    GenreList:{
+        type:Array,
+        required:false,
+    },
+    Bio : {
+        type:String,
+        required:false,
+    },
+    Image : {
+        type:String,
+        required:false,
+    },
+    Gender : {
         type:String,
         required:false,
     },
@@ -34,6 +46,10 @@ const Data = new Schema({
         type:String,
         required:false,
     },
+    BloodGroup :{
+        type:String,
+        required:false,
+    },
     List: [
         {
             _id:{
@@ -46,9 +62,6 @@ const Data = new Schema({
             }
         }
     ]
-},
-{
-    timestamps:true,
 })
 
 Data.pre("save",async function(next){

@@ -1,4 +1,4 @@
-const select = document.querySelector("#gender")
+const select = document.querySelector("#gender");
 const girls_pic = document.querySelector(".girls-pfp");
 const boys_pic = document.querySelector(".boys-pfp");
 const pfp = document.querySelectorAll(".pfp");
@@ -55,7 +55,7 @@ pfp.forEach(value =>{
         checkerPfp(name);
         imageSammer();
         imageStyler();
-        console.log(image);
+        
     })
 })
 
@@ -110,7 +110,7 @@ const wrBio = document.querySelector(".wrn")
 bioEditor.addEventListener('keyup',(event)=>{
  const bio = bioEditor.value;
  BIO =[bio];
- console.log(BIO)
+ 
  bioCount.innerHTML = bio.length;
  if (bio.length > 50) {
     wrBio.style.color = "red"

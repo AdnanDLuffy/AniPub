@@ -7,7 +7,6 @@ const AboutUsButton = document.querySelector(".About-us-Button");
 const ProfileButton = document.querySelector(".Profile-Button");
 const helpbutton = document.querySelector(".help-button");
 
-
 Home.addEventListener('click',()=>{
     window.location.href="/Home";
 })
@@ -30,4 +29,7 @@ AboutUsButton.addEventListener("click",()=>{
 })
 PrivacyButton.addEventListener("click",()=>{
     window.location.href="/Privacy-policy";
+})
+SecurityButton.addEventListener('click',()=>{
+    window.location.href = "/Settings";
 })

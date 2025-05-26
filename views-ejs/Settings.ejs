@@ -4,71 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | AniPub</title>
-    <link rel="stylesheet" href="/style/hc.css">
-    <link rel="stylesheet" href="/style/profile.css">
-    <link rel="stylesheet" href="/style/settings.css">
+    <link rel="stylesheet" href="/hc.css">
+    <link rel="stylesheet" href="/profile.css">
+    <link rel="stylesheet" href="/settings.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/Styles/ScrollBar.css">
+    <link rel="stylesheet" href="/ScrollBar.css">
 </head>
 <body>
-    <header> 
-        <div class="margin">
-            <div class="logo-div">
-                <img class="logo" src="/Logo/Nemuri_Kayama_Anime_Action.webp" alt="">
-            </div>
-            <div class="Name">
-                 <p>🚨Ani-Pub Settigns 🚨</p>
-            </div>
-           
-        </div>
-    </header>
-    <nav class="nav">
-        <div class="menu">
-          
-                  <button class="Profile-Button" data-account="">
-                <img class="img-logo"  src="/icon/account_circle_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-                <p>Profile</p>
-            </button>
-            
-            
-            <button class="Home-button">
-                <img class="img-logo"  src="/icon/home_app_logo_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-                <p>Home</p>
-            </button>
-    
-       
-            <button class="PlayList-button" data-account="">
-                <img class="img-logo"  src="/icon/video_library_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-                <p>Playlist</p>
-            </button>
-          
-    
-            <button class="Security-button">
-                <img class="img-logo"   src="/icon/security_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-                <p>Security</p>
-            </button>
-            <button class="Privacy-button">
-                <img class="img-logo"  src="/icon/policy_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-                <p>Privacy</p>
-            </button>
-            <button class="About-us About-us-Button">
-                <img class="img-logo"  src="/icon/info_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-                <p>About Us</p>
-            </button>
-            
-            <button class="help-button">
-                <img class="img-logo"  src="/icon/help_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-                <p>Help</p>
-            </button>
-        </div>
-       
-    </nav>   
-      
+   
+    <%- include("./include/header.ejs")  %> 
+    <%- include("./include/nav.ejs") %> 
+     
 
         <div class="main-body">
             <div class="privacy-settings">
@@ -76,7 +27,7 @@
                    <p>Privecy Settings</p> 
                 </div>
                 <button class="icon iconB PVST">
-                    <img class="pvst" src="/icon/arrow-circle-down-svgrepo-com.svg" alt="">
+                    <img class="pvst" src="/arrow-circle-down-svgrepo-com.svg" alt="">
                 </button>
             </div>
             <div class="privacy-settings-container" style="display: none;">
@@ -116,7 +67,7 @@
                     <p>Additional Info</p> 
                  </div>
                  <button class="icon iconB ad-info">
-                     <img class="pvst" src="/icon/arrow-circle-down-svgrepo-com.svg" alt="">
+                     <img class="pvst" src="/arrow-circle-down-svgrepo-com.svg" alt="">
                  </button>
             </div>
             <div class="Additional-Info-Box">
@@ -203,8 +154,8 @@
                 <div class="txt">
                     <p>Account Info</p> 
                  </div>
-                 <button class="icon iconB ad-info">
-                     <img class="pvst" src="/icon/arrow-circle-down-svgrepo-com.svg" alt="">
+                 <button class="icon iconB ac-info">
+                     <img class="pvst" src="/arrow-circle-down-svgrepo-com.svg" alt="">
                  </button>
             </div>
 
@@ -229,7 +180,7 @@
                    <div class="girls-pfp" >
 
                     <div class="pfp bunny" data-name="bunny.jpg">
-                        <img src="/image/ProfilePic/bunny.jpg" alt="bunny profile pic" >
+                        <img src="/ProfilePic/bunny.jpg" alt="bunny profile pic" >
                     
                         <div class="info-pfp">
                             <p>
@@ -237,7 +188,7 @@
                         </div>
                     </div>
                     <div class="pfp esdeath" data-name="esdeath.jpg">
-                        <img src="/image/ProfilePic/esdeath.jpg" alt="esdeath profile pic" >
+                        <img src="/ProfilePic/esdeath.jpg" alt="esdeath profile pic" >
                         <div class="info-pfp">
                             <p>
                                 I’m Esdeath, Empire’s ruthless General, wielding ice and thriving on strength. 
@@ -246,7 +197,7 @@
                     
                     </div>
                     <div class="pfp luccy" data-name="Luccy.jpg">
-                        <img src="/image/ProfilePic/Luccy.jpg" alt="luccy profile pic" >
+                        <img src="/ProfilePic/Luccy.jpg" alt="luccy profile pic" >
                         <div class="info-pfp">
                             <p>
                              ~ Too Sleepy
@@ -254,35 +205,35 @@
                         </div>  
                     </div>
                     <div class="pfp makima" data-name="makima.jpg">
-                        <img src="/image/ProfilePic/makima.jpg" alt="makima profile pic" >
+                        <img src="/ProfilePic/makima.jpg" alt="makima profile pic" >
                         <div class="info-pfp">
                             <p>
                                 I’m Makima, a cunning Control Devil, manipulating for my own dark goals.      </p>
                         </div>  
                     </div>
                     <div class="pfp mitsuri" data-name="mitsuri.jpg">
-                        <img src="/image/ProfilePic/mitsuri.jpg" alt="mitsuri profile pic" >
+                        <img src="/ProfilePic/mitsuri.jpg" alt="mitsuri profile pic" >
                         <div class="info-pfp">
                             <p>
                                 I’m Mitsuri, a bubbly Hashira, spreading love with my whip-like blade.      </p>
                         </div>  
                     </div>
                     <div class="pfp princia" data-name="princia.jpg">
-                        <img src="/image/ProfilePic/princia.jpg" alt="princia profile pic" >
+                        <img src="/ProfilePic/princia.jpg" alt="princia profile pic" >
                         <div class="info-pfp">
                             <p>
                                 I’m Princia, Clover Kingdom’s fierce Wizard King, commanding Legion Magic    </p>
                         </div>  
                     </div>
                     <div class="pfp tenko" data-name="tenko.jpg">
-                        <img src="/image/ProfilePic/tenko.jpg" alt="tenko profile pic" >
+                        <img src="/ProfilePic/tenko.jpg" alt="tenko profile pic" >
                         <div class="info-pfp">
                             <p>
                                 I’m Tenko, a spirited fighter, wielding powers in Mato’s demon battles.     </p>
                         </div>  
                     </div>
                     <div class="pfp tsukasa" data-name="tsukasa.jpg">
-                        <img src="/image/ProfilePic/tsukasa.jpg" alt="tsukasa profile pic from Fly me over the moon" >
+                        <img src="/ProfilePic/tsukasa.jpg" alt="tsukasa profile pic from Fly me over the moon" >
                         <div class="info-pfp">
                             <p>
                                 I’m Tsukasa, a timeless beauty, sharing love and secrets with my husband.  </p>
@@ -293,7 +244,7 @@
 
                 <div class="boys-pfp">
                     <div class="pfp cid" data-name="cid.jpg">
-                        <img src="/image/ProfilePic/boys/cid.jpg" alt="cid profile pic">
+                        <img src="/ProfilePic/boys/cid.jpg" alt="cid profile pic">
                         <div class="info-pfp">
                             <p>
                                 I’m Cid, mastermind behind Shadow Garden, orchestrating chaos in the shadows.
@@ -302,7 +253,7 @@
 
                     </div>
                     <div class="pfp hickigaya" data-name="hickigaya.jpg">
-                        <img src="/image/ProfilePic/boys/hickigaya.jpg" alt="hickigaya profile pic">
+                        <img src="/ProfilePic/boys/hickigaya.jpg" alt="hickigaya profile pic">
                         <div class="info-pfp">
                             <p>
                                 I’m Hachiman, a cynical loner, solving high school problems my way.
@@ -311,7 +262,7 @@
 
                     </div>
                     <div class="pfp luffy" data-name="luffy.jpg">
-                        <img src="/image/ProfilePic/boys/luffy.jpg" alt="luffy profile pic">
+                        <img src="/ProfilePic/boys/luffy.jpg" alt="luffy profile pic">
                         <div class="info-pfp">
                             <p>
                                 I’m Luffy, Straw Hat captain, chasing One Piece with my crew! 
@@ -323,7 +274,7 @@
             
             </div>
             <div class="save-acc-info">
-                <button>Save</button>
+                <button class="ac-info-save">Save</button>
             </div>
             
             
@@ -336,7 +287,7 @@
                     <p>Account Settings</p> 
                  </div>
                  <button class="icon iconB ad-info">
-                     <img class="pvst" src="/icon/arrow-circle-down-svgrepo-com.svg" alt="">
+                     <img class="pvst" src="/arrow-circle-down-svgrepo-com.svg" alt="">
                  </button>
             </div>
 
@@ -345,7 +296,7 @@
                     <p>Site Settings</p> 
                  </div>
                  <button class="icon iconB ad-info">
-                     <img class="pvst" src="/icon/arrow-circle-down-svgrepo-com.svg" alt="">
+                     <img class="pvst" src="/arrow-circle-down-svgrepo-com.svg" alt="">
                  </button>
             </div>
 
@@ -354,7 +305,7 @@
                     <p>Account Monitization -(Currently Unavailable) </p> 
                  </div>
                  <button class="icon iconB ad-info">
-                     <img class="pvst" src="/icon/arrow-circle-down-svgrepo-com.svg" alt="">
+                     <img class="pvst" src="/arrow-circle-down-svgrepo-com.svg" alt="">
                  </button>
             </div>
 
@@ -363,18 +314,18 @@
                     <p>Account Delation and Deativation</p> 
                  </div>
                  <button class="icon iconB ad-info">
-                     <img class="pvst" src="/icon/arrow-circle-down-svgrepo-com.svg" alt="">
+                     <img class="pvst" src="/arrow-circle-down-svgrepo-com.svg" alt="">
                  </button>
             </div>
 
         </div>
 
-        <script src="/JS/image.js"></script>
-        <script src="/JS/pv-st-ch.js"></script> 
-        <script src="/JS/navigator.js"></script>
-        <script type="module" src="/JS/additional-st.js"></script>
-        <script type="module" src="/JS/ad-st-s.js"></script>
-        <script src="/JS/ad-nav.js"></script>
-        <script src="/JS/acc-info.js"></script>
+        <script src="/image.js"></script>
+        <script src="/pv-st-ch.js"></script> 
+        <script src="/navigator.js"></script>
+        <script type="module" src="/additional-st.js"></script>
+        <script type="module" src="/ad-st-s.js"></script>
+        <script src="/ad-nav.js"></script>
+        <script type="module" src="/acc-info.js"></script>
     </body>
 </html>

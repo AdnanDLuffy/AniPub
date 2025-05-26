@@ -26,7 +26,13 @@
                 <img class="bg-img" src="/Esdeath.jpg" alt="">
             </div>
             <div class="profile-pic-div">
-                <img class="profile-pic" src="/Shinbou.jpg" alt="">
+                <img class="profile-pic" 
+                <% if(userInfo.Gender === "Male") {%> 
+                src="/ProfilePic/boys/<%=userInfo.image %> "
+                <% } else {%>
+                    src="/ProfilePic/<%=userInfo.Image %> "
+                <% } %>     
+                alt="">
             </div>
 
         </div>
@@ -62,7 +68,7 @@
             <div class="address-div">
                 <p>Address : </p>
                 <div class="det-container">
-                 <p class="address" id="address"></p>
+                 <p class="address" id="address"><%= userInfo.Address %> </p>
                 
                 </div>
                 
@@ -70,7 +76,7 @@
             <div class="relationship-status-div">
                 <p style="font-size: 16px;">Relationship Status : </p>
                 <div class="det-container">
-                  <p class="rlsn-status" id="rlsns"> </p>
+                  <p class="rlsn-status" id="rlsns"><%= userInfo.Relation %>  </p>
              
                 </div>
                

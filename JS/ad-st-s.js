@@ -26,7 +26,7 @@ const setAdSt = (r,a,b) => {
 };
 
 const clearAdst = () =>{
-   finalAdSt = finalAdSt.splice(0,1);
+   finalAdSt.splice(0,finalAdSt.length);
    localStorage.setItem("finalAdst",JSON.stringify(finalAdSt));
 }
 const relation = document.getElementById("rlts");
@@ -43,5 +43,26 @@ atstSave.addEventListener('click',()=>{
     console.log(finalAdSt);
 
     // now we will fetch it to the server
-
+   fetch("Settings/ad-st",{
+      method:"POST",
+      headers:{"content-type":"application/json"},
+      body:JSON.stringify({finalAdSt})
+   })
+   .then (info=>info.json())
+   .then(data =>{
+      redirect (data);
+   })
 })
+
+export function redirect (data) {
+   if(data.includes("/Info Saved")) {
+      alert("Info Saved to DataBase");
+      // it will be cool to add some cool stuff here hehe ;
+   }
+   else if (data.includes("/Login")) {
+      window.location.href = "/Login"
+   }
+   else {
+      console.log("There is a error with internal server ");
+   }
+}

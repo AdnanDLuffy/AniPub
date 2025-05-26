@@ -58,7 +58,7 @@ app.use(express.static(path.join(__dirname,"../Styles")));
 app.use(express.urlencoded({extended:true}));
 
 
-app.use(morgan("combined")); 
+app.use(morgan("common")); 
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"../views-ejs"));
 
@@ -164,6 +164,13 @@ app.get("/Profile/:id",AuthAcc,(req,res)=>{
                      ID : info._id,
                      Name : info.Name,
                      Email :info.Email,
+                     Bio : info.Bio,
+                     BloodGroup: info.BloodGroup,
+                     image : info.Image,
+                     Gender: info.Gender,
+                     Genre: info.GenreList,
+                     Address : info.Address,
+                     Relation : info.RelationshipStatus,
                  }
                  res.render("Profile",{SectionName:"Profile",Auth:true,userInfo})
             })
@@ -201,9 +208,9 @@ app.get(`/AniPlayer/:AniId/:AniEP`,(req,res)=>{
 //Delete all account
 
 // app.get("/D",(req,res)=>{
-//     Data.deleteMany()
-//     .then(res.redirect("/"))
-// })
+//      Data.deleteMany()
+//      .then(res.redirect("/"))
+//  })
 
 
 app.get("/PlayList/:id",(req,res)=>{
@@ -314,6 +321,83 @@ app.delete('/PlayList/Delete/:DeleteID',(req,res)=>{
      
 })
 
+
+//Settings 
+
+app.get("/Settings",(req,res)=>{
+    const Token = req.cookies.anipub;
+    if(Token) {
+        jwt.verify(Token,"I Am Naruto",(err,data)=>{
+            if(err) {
+                res.redirect("/Login");
+            }
+            const userInfo = {ID:data.id}
+             res.render("Settings",{SectionName:"Settings Section",Auth:true,userInfo});
+        })
+    }
+})
+app.post("/Settings/ad-st",async (req,res)=>{
+     const Token = req.cookies.anipub;
+     if(Token) {
+         jwt.verify(Token,"I Am Naruto",async(err,data)=>{
+             if(err) {
+                 res.status(501).send("You are not Authorized"); // will be focused on letter
+             }
+            const rlst = req.body.finalAdSt[0].Relation;
+            const addr = req.body.finalAdSt[1].address;
+            const bld = req.body.finalAdSt[2].bloodGroup;
+            const genre = req.body.finalAdSt[3].Genre;
+            console.log(genre)
+            await Data.findByIdAndUpdate(data.id,{RelationshipStatus:rlst});
+            await Data.findByIdAndUpdate(data.id,{Address:addr});
+            await Data.findByIdAndUpdate(data.id,{BloodGroup:bld});
+            await Data.findByIdAndUpdate(data.id,{GenreList:genre});
+
+            res.json(["/Info Saved"]);
+         })
+     }
+     else {
+        res.json(["/Login"])
+     }
+    
+
+    
+})
+// { image: [], Gender: false, bio: ' Bio  ' }
+
+app.post("/settings/account-info", (req,res)=>{
+    const Token = req.cookies.anipub;
+    if(Token){
+        jwt.verify(Token,"I Am Naruto",async(err,data)=>{
+            if(err){
+                res.json(["You are not Authorized"]);
+            }
+            let image = req.body.image[0];
+            if(image === undefined ) {
+                image = "/Shinbou.jpg"
+            }
+            let gender = req.body.gender;
+            if(gender){
+                gender = "Female"
+            }
+            else {
+                gender = "Male"
+            }
+            const bio = req.body.bio;
+        
+            await Data.findByIdAndUpdate(data.id,{Bio:bio});
+            await Data.findByIdAndUpdate(data.id,{Gender:gender});
+            await Data.findByIdAndUpdate(data.id,{Image:image});
+            res.json(["/Info Saved"]);
+        })
+    }
+    else {
+        res.json(['/Login']);
+        
+    }
+   
+
+})
 //Update --- false auth to cheking
 app.get("/About-Us",(req,res)=>{
     res.render("About-Us",{SectionName:"About Us Section",Auth:false});
